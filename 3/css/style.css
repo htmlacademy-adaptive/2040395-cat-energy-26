@@ -913,11 +913,11 @@
 }
 .form__control--radio {
   padding-left: 46px;
-  margin-bottom: 7px;
+  margin-bottom: 25px;
 }
 .form__control--checkbox {
   padding-left: 45px;
-  margin-bottom: 2px;
+  margin-bottom: 25px;
 }
 .form__radio {
   width: 30px;
@@ -967,6 +967,9 @@
   min-height: 150px;
   box-sizing: border-box;
 }
+.form__input--radio {
+  display: none;
+}
 .form__input--radio:disabled + .form__radio {
   opacity: 0.3;
 }
@@ -1006,7 +1009,7 @@
   opacity: 0.3;
 }
 .form__input--checkbox {
-  margin-bottom: 25px;
+  display: none;
 }
 .form__input--checkbox:disabled + .form__checkbox {
   opacity: 0.3;
