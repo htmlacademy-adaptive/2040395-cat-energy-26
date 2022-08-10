@@ -133,12 +133,12 @@
 
   &--radio {
     padding-left: 46px;
-    margin-bottom: 7px;
+    margin-bottom: 25px;
   }
 
   &--checkbox {
     padding-left: 45px;
-    margin-bottom: 2px;
+    margin-bottom: 25px;
   }
 }
 
@@ -195,6 +195,10 @@
     box-sizing: border-box;
   }
 
+  &--radio {
+    display: none;
+  }
+
   &--radio:disabled + .form__radio {
     opacity: 0.3;
   }
@@ -238,7 +242,7 @@
   }
 
   &--checkbox {
-    margin-bottom: 25px;
+    display: none;
   }
 
   &--checkbox:disabled + .form__checkbox {
