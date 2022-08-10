@@ -2,14 +2,14 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../../../fonts/oswaldregular.woff2") format("woff2"), url("../../fonts/oswaldregular.woff") format("woff");
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../../fonts/oswaldregular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("../../../fonts/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswaldmedium.woff") format("woff");
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
 .visually-hidden {
@@ -61,7 +61,7 @@
   display: block;
 }
 .main-nav__toggle {
-  background-image: url("../../img/burger-menu.svg");
+  background-image: url("../img/burger-menu.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 24px;
@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 .main-nav__toggle--active {
-  background-image: url("../../img/cross.svg");
+  background-image: url("../img/cross.svg");
   background-position: center;
 }
 .main-nav__logo {
@@ -133,7 +133,7 @@
   z-index: 1;
 }
 .hero::before {
-  background-image: url("../../img/index-background.jpg");
+  background-image: url("../img/index-background.jpg");
   opacity: 0.15;
   position: absolute;
   content: "";
@@ -198,12 +198,12 @@
   padding: 30px 20px 18px 20px;
 }
 .food-plan__item--slim {
-  background-image: url("../../img/cat-back.svg");
+  background-image: url("../img/cat-back.svg");
   background-repeat: no-repeat;
   background-position: 22px 24px;
 }
 .food-plan__item--pro {
-  background-image: url("../../img/cat-back-pro.svg");
+  background-image: url("../img/cat-back-pro.svg");
   background-repeat: no-repeat;
   background-position: 12px 24px;
 }
@@ -231,19 +231,19 @@
   line-height: 16px;
   padding: 4px 50px 4px 0;
   text-align: left;
-  background-image: url("../../img/arrow-right.svg");
+  background-image: url("../img/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: right 10% center;
   display: inline-block;
   position: relative;
 }
 .food-plan__button:hover {
-  background-image: url("../../img/arrow-right-big.svg");
+  background-image: url("../img/arrow-right-big.svg");
   background-position: right center;
   background-color: transparent;
 }
 .food-plan__button:active {
-  background-image: url("../../img/arrow-right-big.svg");
+  background-image: url("../img/arrow-right-big.svg");
   background-position: right center;
   background-color: transparent;
   opacity: 0.3;
@@ -280,19 +280,19 @@
   padding-left: 80px;
 }
 .advantages__item--nutritious {
-  background-image: url("../../img/nutritious.svg");
+  background-image: url("../img/nutritious.svg");
   background-repeat: no-repeat;
 }
 .advantages__item--use {
-  background-image: url("../../img/use.svg");
+  background-image: url("../img/use.svg");
   background-repeat: no-repeat;
 }
 .advantages__item--meals {
-  background-image: url("../../img/meals.svg");
+  background-image: url("../img/meals.svg");
   background-repeat: no-repeat;
 }
 .advantages__item--fast {
-  background-image: url("../../img/fast.svg");
+  background-image: url("../img/fast.svg");
   background-repeat: no-repeat;
 }
 .advantages__description {
@@ -664,7 +664,7 @@
 }
 .product-card__content--empty {
   padding-top: 58px;
-  background-image: url("../../img/plus.svg");
+  background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -762,7 +762,7 @@
   z-index: 1;
 }
 .promo__content::before {
-  background-image: url("../../img/promo.jpg");
+  background-image: url("../img/promo.jpg");
   opacity: 0.15;
   position: absolute;
   content: "";
@@ -773,7 +773,7 @@
   z-index: -1;
 }
 .promo__content::after {
-  background-image: url("../../img/icon-gift.svg");
+  background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
   position: absolute;
   content: "";
@@ -1012,7 +1012,7 @@
   opacity: 0.3;
 }
 .form__input--checkbox:checked + .form__checkbox {
-  background-image: url("../../img/checked.svg");
+  background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
