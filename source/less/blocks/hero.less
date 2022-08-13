@@ -1,22 +1,27 @@
 .hero {
-  background: linear-gradient(to bottom, @main-color 63%, @white 47%);
   padding: 27px 20px 0 20px;
-  position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero::before {
-  background-image: url("../img/index-background.jpg");
-  opacity: 0.15;
+.hero__wrapper {
+  .center(280px);
+}
+
+.hero__wrapper::before {
+  background-image: linear-gradient(rgba(@main-color, 0.85), rgba(@main-color, 0.85)), url("../img/index-background.jpg");
+  background-repeat: no-repeat;
   position: absolute;
   content: "";
-  width: 320px;
+  width: @mobile-width;
   height: 302px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
+  transform: translate(-20px, -27px);
 }
 
 .hero__title {
@@ -37,4 +42,103 @@
   text-align: center;
   margin: 0;
   margin-bottom: 30px;
+}
+
+.hero__image {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    padding: 0 30px;
+  }
+
+  .hero__wrapper {
+    .center(708px);
+  }
+
+  .hero__wrapper::before {
+    display: none;
+  }
+
+  .hero__title {
+    .title-tablet;
+    max-width: 416px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .hero__description {
+    color: @black;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 609px;
+  }
+
+  .hero__text {
+    position: relative;
+  }
+
+  .hero__button {
+    position: absolute;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    top: 0;
+    left: 0;
+    transform: translate(170px, 320px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero {
+    .center(1220px);
+    padding: 40px 50px;
+  }
+
+  .hero__wrapper {
+    .center(1220px);
+    position: static;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__wrapper::before {
+    display: block;
+    background-image: linear-gradient(rgba(@main-color, 0.85), rgba(@main-color, 0.85)), url("../img/cat-hero.jpeg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 694px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(760px);
+  }
+
+  .hero__image {
+    width: 552px;
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .hero__button {
+    transform: translate(150px, 500px);
+  }
+
+  .hero__text {
+    padding-left: 30px;
+  }
 }

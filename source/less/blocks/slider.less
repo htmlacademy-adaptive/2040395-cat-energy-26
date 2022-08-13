@@ -1,67 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
 .slider {
-  display: flex;
-  flex-direction: column;
-}
-
-.slider__control {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-.slider__text {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.slider__slides {
-  margin-bottom: 23px;
   position: relative;
-}
-
-.slider__before {
-  width: 280px;
-  height: 232px;
-  object-fit: cover;
+  overflow: hidden;
 }
 
 .slider__after {
-  position: absolute;
+  display: block;
   width: 280px;
-  height: 232px;
-  z-index: 20;
-  top: 0;
-  left: 30px;
-  display: none;
-}
-
-.slider__range {
-  margin: 0 auto;
-  padding: 0 18px;
-}
-
-.slider__scale {
-  display: block;
-  background-color: @white;
-  height: 12px;
-  width: 83px;
-  border: 1px solid #cdcdcd;
-  border-radius: 6px;
+  height: 256px;
+  object-fit: contain;
   position: relative;
+  z-index: 1;
+  left: 10px;
 }
 
-.slider__bar {
-  display: block;
-  background-color: @main-color;
-  width: 35px;
-  height: 6px;
+.slider__before {
   position: absolute;
-  border-radius: 6px;
-  top: 3px;
-  left: 4px;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 256px;
+  overflow: hidden;
+  z-index: 2;
+  object-fit: contain;
+  background-color: #eaeaea;
 }
 
-.slider__toggle {
-  display: none;
+.slider__resizer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background: #666666;
+  /*Stop vertical scrolling on touch*/
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.slider__resizer::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/slider-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @white;
+  position: absolute;
+  margin: 0 0 0 -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  cursor: pointer;
+}
+
+.slider__resizer:hover::after {
+  background-image: url("../img/slider-button-hover.svg");
+  border: 2px solid @main-color;
+}
+
+.slider__resizer:hover {
+  background-color: @main-color;
+}
+
+.slider__resizer:active::after {
+  background-image: url("../img/slider-button-hover.svg");
+  border: 2px solid @main-color 0.6;
+}
+
+.slider__resizer:active {
+  background-color: @main-color;
+  opacity: 0.6;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__before {
+    width: 560px;
+    height: 512px;
+    background-image: linear-gradient(to bottom, #ffffff 32.1%, #ebebeb 32.1%);
+  }
+
+  .slider__after {
+    width: 560px;
+    height: 512px;
+    left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__before {
+    background-image: linear-gradient(to bottom, #ffffff 26.6%, #ebebeb 26.6%);
+  }
 }

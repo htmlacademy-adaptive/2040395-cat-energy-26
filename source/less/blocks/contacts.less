@@ -3,6 +3,7 @@
 }
 
 .contacts__wrapper {
+  .center(280px);
   padding: 26px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -25,4 +26,31 @@
 
 .contacts__map {
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    .center(708px);
+    padding: 60px 70px;
+    gap: 250px;
+  }
+
+  .contacts__text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .contacts__address {
+    font-size: 16px;
+    max-width: 160px;
+  }
+
+  .contacts__street {
+    display: block;
+  }
+
+  .contacts__map {
+    width: 100%;
+    background-image: url("../img/");
+  }
 }

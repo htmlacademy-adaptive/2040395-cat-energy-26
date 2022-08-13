@@ -7,6 +7,7 @@
   justify-content: center;
   margin-bottom: 40px;
   position: relative;
+  align-items: center;
 }
 
 .social::before {
@@ -50,4 +51,16 @@
 .social__icon:active {
   fill: @main-color;
   opacity: 0.3;
+}
+
+
+@media (min-width: @tablet-width) {
+  .social {
+    margin: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }

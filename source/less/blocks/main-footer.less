@@ -1,5 +1,17 @@
-.main-footer {
-  margin: 0 auto;
-  background-color: @basic-grey;
+.main-footer__wrapper {
+  .center(280px);
   padding: 40px 20px 22px;
+}
+
+.main-footer {
+  background-color: @basic-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer__wrapper {
+    .center(708px);
+    padding: 56px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
