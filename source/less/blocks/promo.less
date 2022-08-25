@@ -5,6 +5,8 @@
 
 .promo__content {
   background-color: @main-color;
+  background-image: url("../img/icon-gift.svg");
+  background-position: center top 58px;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -13,6 +15,8 @@
 
   &::before {
     background-image: url("../img/promo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     opacity: 0.15;
     position: absolute;
     content: "";
@@ -22,28 +26,52 @@
     bottom: 0;
     z-index: -1;
   }
-
-  &::after {
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    transform: translate(101px, 60px);
-  }
 }
 
 .promo__description {
   padding: 187px 60px 43px;
-  font-family: "Arial", sans-serif;
+  .font-arial();
   color: @white;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  max-width: 160px;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    padding: 70px 30px 76px;
+  }
+
+  .promo__description {
+    padding: 70px 124px 70px 422px;
+    text-align: left;
+  }
+
+  .promo__content {
+    background-size: 80px;
+    background-position: left 101px center;
+  }
+
+  .promo__content::before {
+    background-size: cover;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding: 0;
+    max-width: 245px;
+    position: absolute;
+    transform: translate(1080px, 1530px);
+  }
+
+  .promo__content {
+    background-position: center top 83px;
+  }
+
+  .promo__description {
+    padding: 184px 42px 42px;
+    text-align: center;
+  }
 }

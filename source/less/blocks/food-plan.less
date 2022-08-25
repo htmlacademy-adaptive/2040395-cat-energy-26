@@ -43,7 +43,7 @@
 }
 
 .food-plan__description {
-  font-family: "Arial", sans-serif;
+  .font-arial();
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -136,16 +136,40 @@
 
 @media (min-width: @desktop-width) {
   .food-plan {
-    padding: 82px 110px 0;
+    padding: 82px 110px 71px;
   }
 
   .food-plan__wrapper {
     .center(1220px);
   }
 
+  .food-plan__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  .food-plan__description {
+    max-width: none;
+    margin-bottom: 27px;
+  }
+
   .food-plan__list {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 80px;
+  }
+
+  .food-plan__item {
+    padding: 77px 52px 59px 52px;
+
+    &--slim {
+      background-position: 52px 47px;
+      background-size: 100px;
+    }
+
+    &--pro {
+      background-position: 36px 47px;
+      background-size: 134px;
+    }
   }
 }

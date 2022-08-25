@@ -13,23 +13,10 @@
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ebebeb;
-    width: 74px;
-    height: 24px;
-    transform: translate(20px, 40px);
-  }
 }
 
 .example-info__title {
-  font-family: "Oswald", sans-serif;
+  .font-oswald();
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -40,7 +27,7 @@
 }
 
 .example-info__subtitle {
-  font-family: "Arial", sans-serif;
+  .font-arial();
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -48,6 +35,8 @@
   display: block;
   position: absolute;
   max-width: 77px;
+  max-height: 20px;
+  background-color: #ebebeb;
 }
 
 @media (min-width: @tablet-width) {
@@ -60,19 +49,6 @@
 
   .example-info__item {
     padding: 15px 30px 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: @white;
-      width: 140px;
-      height: 27px;
-      transform: translate(10px, 60px);
-    }
   }
 
   .example-info__title {
@@ -84,17 +60,27 @@
   .example-info__subtitle {
     font-size: 14px;
     line-height: 14px;
-    max-width: 170px;
+    max-width: 130px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    transform: translateY(74px);
+    transform: translate(15px, 74px);
+    background-color: @white;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example-info {
     display: flex;
+    margin-bottom: 60px;
+  }
+
+  .example-info__subtitle {
+    background-color: #ebebeb;
+  }
+
+  .example-info__item {
+    width: 165px;
   }
 }

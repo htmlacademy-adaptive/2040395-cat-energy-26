@@ -1,5 +1,5 @@
 .example {
-  padding: 25px 20px 48px;
+  padding: 25px 20px 40px;
   background-color: #ebebeb;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
+  .font-arial();
   font-size: 14px;
   line-height: 18px;
   color: #444444;
@@ -31,7 +31,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -65,7 +65,7 @@
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 20px;
     text-align: right;
   }
 }
@@ -91,5 +91,13 @@
 
   .example__description {
     margin-bottom: 68px;
+  }
+
+  .example__total-price {
+    text-align: left;
+  }
+
+  .example__price-value {
+    margin-left: 63px;
   }
 }

@@ -1,6 +1,6 @@
 .main-footer__wrapper {
   .center(280px);
-  padding: 40px 20px 22px;
+  padding: 40px 0 32px;
 }
 
 .main-footer {
@@ -10,8 +10,14 @@
 @media (min-width: @tablet-width) {
   .main-footer__wrapper {
     .center(708px);
-    padding: 56px 30px;
+    padding: 58px 0;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__wrapper {
+    .center(@desktop-container);
   }
 }
