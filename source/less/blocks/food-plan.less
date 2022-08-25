@@ -2,6 +2,10 @@
   padding: 20px 20px;
 }
 
+.food-plan__wrapper {
+  .center(280px);
+}
+
 .food-plan__list {
   list-style-type: none;
   margin: 0;
@@ -39,7 +43,7 @@
 }
 
 .food-plan__description {
-  font-family: "Arial", sans-serif;
+  .font-arial();
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -83,4 +87,89 @@
   top: 0;
   left: 0;
   transform: translateY(-15px);
+}
+
+@media (min-width: @tablet-width) {
+  .food-plan {
+    padding: 0 30px;
+  }
+
+  .food-plan__wrapper {
+    .center(708px);
+  }
+
+  .food-plan__item {
+    padding: 77px 52px 57px 52px;
+
+    &--slim {
+      background-position: center right 68px;
+      background-size: 200px;
+    }
+
+    &--pro {
+      background-position: center right 28px;
+      background-size: 268px;
+    }
+  }
+
+  .food-plan__title {
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .food-plan__description {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 340px;
+  }
+
+  .food-plan__button {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .food-plan__button::before {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .food-plan {
+    padding: 82px 110px 71px;
+  }
+
+  .food-plan__wrapper {
+    .center(1220px);
+  }
+
+  .food-plan__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  .food-plan__description {
+    max-width: none;
+    margin-bottom: 27px;
+  }
+
+  .food-plan__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 80px;
+  }
+
+  .food-plan__item {
+    padding: 77px 52px 59px 52px;
+
+    &--slim {
+      background-position: 52px 47px;
+      background-size: 100px;
+    }
+
+    &--pro {
+      background-position: 36px 47px;
+      background-size: 134px;
+    }
+  }
 }

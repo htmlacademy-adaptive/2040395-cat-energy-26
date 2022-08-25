@@ -1,6 +1,10 @@
 .example {
-  padding: 25px 20px 48px;
+  padding: 25px 20px 40px;
   background-color: #ebebeb;
+}
+
+.example__wrapper {
+  .center(280px);
 }
 
 .example__title {
@@ -12,51 +16,12 @@
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
+  .font-arial();
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   margin: 0;
   margin-bottom: 20px;
-}
-
-.example-info {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 34px;
-}
-
-.example-info__item {
-  padding: 12px 20px;
-  border: 1px solid #cdcdcd;
-  border-radius: 3px;
-}
-
-.example-info__title {
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  margin-bottom: 7px;
-}
-
-.example-info__subtitle {
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 12px;
-  text-align: center;
-  text-transform: none;
-  display: block;
-  background-color: #ebebeb;
-  position: absolute;
-  max-width: 77px;
 }
 
 .example__total-price {
@@ -66,5 +31,73 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-image: linear-gradient(to bottom, #ffffff 58%, #ebebeb 42%);
+  }
+
+  .example__wrapper {
+    .center(708px);
+  }
+
+  .example__text {
+    display: grid;
+    grid-template-columns: 1fr 174px;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .example__title {
+    grid-column: 1 / 3;
+    .title-tablet();
+  }
+
+  .example__description {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__total-price {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-image: linear-gradient(to bottom, #ffffff 27%, #ebebeb 27%);
+  }
+
+  .example__wrapper {
+    width: 1220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .example__text {
+    display: block;
+  }
+
+  .example__title {
+    margin-bottom: 145px;
+  }
+
+  .example__description {
+    margin-bottom: 68px;
+  }
+
+  .example__total-price {
+    text-align: left;
+  }
+
+  .example__price-value {
+    margin-left: 63px;
+  }
 }

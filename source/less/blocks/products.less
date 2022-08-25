@@ -31,3 +31,40 @@
 .products__item {
   padding: 20px 0 25px;
 }
+
+@media (min-width: @tablet-width) {
+  .products {
+    padding: 33px 30px 68px;
+  }
+
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 141px 60px;
+  }
+
+  .products__item {
+    padding: 0;
+  }
+
+  .products__title {
+    margin-bottom: 163px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .products__title::before {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products {
+    padding: 78px 110px 75px;
+  }
+
+  .products__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 143px 80px;
+  }
+}

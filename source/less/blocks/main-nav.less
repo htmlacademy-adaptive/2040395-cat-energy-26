@@ -1,6 +1,7 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
+  .center(280px);
 }
 
 .main-nav__wrapper {
@@ -42,4 +43,32 @@
 
 .main-nav__list {
   background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    align-items: center;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    display: block;
+    position: static;
+    transform: none;
+    width: auto;
+  }
+
+  .main-nav__list {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    .center(1220px);
+  }
 }
