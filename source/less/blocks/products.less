@@ -1,5 +1,6 @@
 .products {
-  padding: 27px 20px 25px;
+  .center-mobile;
+  padding-top: 27px;
 }
 
 .products__title {
@@ -34,7 +35,9 @@
 
 @media (min-width: @tablet-width) {
   .products {
-    padding: 33px 30px 68px;
+    .center-tablet;
+    padding-top: 33px;
+    padding-bottom: 68px;
   }
 
   .products__list {
@@ -60,7 +63,13 @@
 
 @media (min-width: @desktop-width) {
   .products {
-    padding: 78px 110px 75px;
+    .center-desktop;
+    padding-top: 74px;
+    padding-bottom: 75px;
+  }
+
+  .products__title {
+    margin-bottom: 163px;
   }
 
   .products__list {

@@ -1,6 +1,7 @@
 .promo {
   padding: 35px 20px;
   position: relative;
+  .center-mobile;
 }
 
 .promo__content {
@@ -40,7 +41,8 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    padding: 70px 30px 76px;
+    padding: 70px 0 76px;
+    .center-tablet;
   }
 
   .promo__description {
@@ -62,8 +64,7 @@
   .promo {
     padding: 0;
     max-width: 245px;
-    position: absolute;
-    transform: translate(1080px, 1530px);
+    align-self: flex-end;
   }
 
   .promo__content {

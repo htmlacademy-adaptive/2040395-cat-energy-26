@@ -1,6 +1,7 @@
 .form {
-  padding: 27px 20px 32px;
-  overflow: hidden;
+  .center-mobile;
+  padding-top: 27px;
+  padding-bottom: 32px;
 }
 
 .form__title {
@@ -75,7 +76,7 @@
   &--contacts::before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 2px;
     background-color: @main-color;
     top: 0;
@@ -91,7 +92,7 @@
   &--comment::before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 2px;
     background-color: @main-color;
     top: 0;
@@ -107,7 +108,7 @@
   &--additional::before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 2px;
     background-color: @main-color;
     top: 0;
@@ -277,6 +278,7 @@
   margin-bottom: 36px;
   position: relative;
   padding: 0;
+  max-width: 187px;
 }
 
 .form__submit-button {
@@ -299,15 +301,205 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 70px;
+    width: 628px;
+    margin: 0 auto;
+    padding-top: 34px;
+    padding-bottom: 72px;
   }
 
   .form__title {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 54px;
   }
 
   .form__title::before {
     display: none;
+  }
+
+  .form__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__field--aim {
+    padding: 25px 28px;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 75px;
+  }
+
+  .form__field--aim::before {
+    display: none;
+  }
+
+  .form__field--aim::after {
+    display: none;
+  }
+
+  .form__heading {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+    max-width: none;
+  }
+
+  .form__heading--additional {
+    margin-bottom: 60px;
+  }
+
+  .form__heading::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: @main-color;
+    top: 0;
+    left: 0;
+    transform: translate(-90px, 22px);
+  }
+
+  .form__control {
+    margin-bottom: 20px;
+  }
+
+  .form__field--contacts {
+    margin-bottom: 35px;
+  }
+
+  .form__field--contacts::before {
+    transform: translate(540px, -90px);
+  }
+
+  .form__field--comment {
+    margin-bottom: 62px;
+  }
+
+  .form__field--comment::before {
+    transform: translate(200px, -90px);
+  }
+
+  .form__field--additional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    margin-bottom: 18px;
+  }
+
+  .form__field--additional::before {
+    transform: translate(230px, -75px);
+  }
+
+  .form__checkbox {
+    width: 40px;
+    height: 40px;
+    transform: translate(-60px, -5px);
+  }
+
+  .form__radio {
+    width: 40px;
+    height: 40px;
+    transform: translate(-60px, -5px);
+  }
+
+  .form__input--radio:checked + .form__radio::before {
+    width: 18px;
+    height: 18px;
+    transform: translate(10px, 10px);
+  }
+
+  .form__input--checkbox:checked + .form__checkbox {
+    background-size: 24px 18px;
+  }
+
+  .form__input--comment {
+    min-height: 174px;
+  }
+
+  .form__control--radio {
+    padding-left: 60px;
+  }
+
+  .form__control--checkbox {
+    padding-left: 60px;
+    margin-bottom: 42px;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .form__submit-button {
+    width: 282px;
+    margin: 0;
+    font-size: 20px;
+    padding: 13px 45px;
+  }
+
+  .form__notice {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    .center-desktop;
+    padding-top: 73px;
+  }
+
+  .form__field-wrapper {
+    display: flex;
+    gap: 80px;
+  }
+
+  .form__field--main {
+    flex-grow: 1;
+  }
+
+  .form__field--aim {
+    flex-grow: 1;
+  }
+
+  .form__field--contacts {
+    display: flex;
+    gap: 78px;
+  }
+
+  .form__control--email {
+    flex-grow: 1;
+  }
+
+  .form__control--tel {
+    flex-grow: 1;
+  }
+
+  .form__field--additional {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 61px;
+  }
+
+  .form__control--checkbox {
+    margin: 0;
+  }
+
+  .form__submit-button {
+    width: 568px;
+    padding: 13px 188px;
+  }
+
+  .form__button-wrapper {
+    margin-bottom: 82px;
   }
 }
