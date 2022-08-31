@@ -1,12 +1,18 @@
-let mainNav = document.querySelector('.main-nav__wrapper');
-let dropdownButton = document.querySelector('.main-nav__toggle');
+let navMain = document.querySelector('.main-nav__wrapper');
+let navToggle = document.querySelector('.main-nav__toggle');
 
-dropdownButton.onclick = function() {function1();function2();};
+navMain.classList.remove('main-nav__wrapper--nojs');
+navToggle.classList.remove('main-nav__toggle--nojs');
+navToggle.classList.remove('main-nav__toggle--active');
 
-function1 = function() {
-  mainNav.classList.toggle('main-nav__wrapper--open');
-};
-
-function2 = function() {
-  dropdownButton.classList.toggle('main-nav__toggle--active');
-};
+navToggle.addEventListener('click', function () {
+  if (navMain.classList.contains('main-nav__wrapper--closed')) {
+    navMain.classList.remove('main-nav__wrapper--closed');
+    navMain.classList.add('main-nav__wrapper--opened');
+    navToggle.classList.add('main-nav__toggle--active');
+  } else {
+    navMain.classList.add('main-nav__wrapper--closed');
+    navMain.classList.remove('main-nav__wrapper--opened');
+    navToggle.classList.remove('main-nav__toggle--active');
+  }
+});

@@ -1,10 +1,11 @@
 .hero {
   padding: 27px 20px 0 20px;
   z-index: 1;
+  background-image: linear-gradient(@main-color 64%, @white 64%);
 }
 
 .hero__wrapper {
-  .center(280px);
+  .center-mobile;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -22,7 +23,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  transform: translate(-20px, -28px);
+  transform: translate(-20px, -25px);
 }
 
 .hero__title {
@@ -59,10 +60,11 @@
 @media (min-width: @tablet-width) {
   .hero {
     padding: 0 30px;
+    background-image: none;
   }
 
   .hero__wrapper {
-    .center(708px);
+    .center-tablet;
   }
 
   .hero__wrapper::before {
@@ -100,12 +102,12 @@
 
 @media (min-width: @desktop-width) {
   .hero {
-    .center(1220px);
+    .center-desktop;
     padding: 114px 80px 46px;
   }
 
   .hero__wrapper {
-    .center(1220px);
+    .center-desktop;
     display: flex;
     flex-direction: row;
   }
