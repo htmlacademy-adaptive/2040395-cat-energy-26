@@ -361,12 +361,12 @@
   .form__heading::before {
     position: absolute;
     content: "";
-    width: 70px;
+    width: 1000%;
     height: 2px;
     background-color: @main-color;
     top: 0;
-    left: 0;
-    transform: translate(-90px, 22px);
+    transform: translateY(22px);
+    right: calc(100% + 40px);
   }
 
   .form__control {

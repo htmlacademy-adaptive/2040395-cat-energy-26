@@ -18,17 +18,42 @@
 .food-plan__item {
   background-color: @basic-grey;
   padding: 30px 20px 18px 20px;
+  position: relative;
 
-  &--slim {
-    background-image: url("../img/cat-back.svg");
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/ellipse.svg");
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 22px 24px;
+    transform: translate(22px, 24px);
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 
-  &--pro {
-    background-image: url("../img/cat-back-pro.svg");
+  &::after {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 50px;
     background-repeat: no-repeat;
-    background-position: 12px 24px;
+    background-position: center;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: translate(12px, 24px);
+  }
+
+  &--slim::after {
+    background-image: url("../img/slim.svg");
+  }
+
+  &--pro::after {
+    background-image: url("../img/pro.svg");
   }
 }
 
@@ -66,13 +91,13 @@
 
   &:hover {
     background-image: url("../img/arrow-right-big.svg");
-    background-position: right center;
+    background-position: right 4% center;
     background-color: transparent;
   }
 
   &:active {
     background-image: url("../img/arrow-right-big.svg");
-    background-position: right center;
+    background-position: right 4% center;
     background-color: transparent;
     opacity: 0.3;
   }
@@ -101,14 +126,16 @@
   .food-plan__item {
     padding: 77px 52px 57px 52px;
 
-    &--slim {
-      background-position: center right 68px;
-      background-size: 200px;
+    &::before {
+      width: 200px;
+      height: 200px;
+      transform: translate(446px, 88px);
     }
 
-    &--pro {
-      background-position: center right 28px;
-      background-size: 268px;
+    &::after {
+      width: 268px;
+      height: 194px;
+      transform: translate(412px, 93px);
     }
   }
 
@@ -162,14 +189,16 @@
   .food-plan__item {
     padding: 77px 52px 59px 52px;
 
-    &--slim {
-      background-position: 52px 47px;
-      background-size: 100px;
+    &::before {
+      width: 100px;
+      height: 100px;
+      transform: translate(52px, 47px);
     }
 
-    &--pro {
-      background-position: 36px 47px;
-      background-size: 134px;
+    &::after {
+      width: 134px;
+      height: 97px;
+      transform: translate(35px, 47px);
     }
   }
 }
