@@ -1,6 +1,6 @@
 .form {
   .center-mobile;
-  padding-top: 27px;
+  padding-top: 30px;
   padding-bottom: 32px;
 
   &::before {
@@ -20,7 +20,7 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -38,7 +38,7 @@
   padding: 0;
 
   &--main {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
   }
 
   &--aim {
@@ -262,13 +262,13 @@
 }
 
 .form__input:focus {
-  border: 2px solid #ff8282;
+  border: 2px solid #444444;
   outline: none;
   padding: 11px 0 11px 12px;
 }
 
 .form__input:not(:placeholder-shown):invalid {
-  border: 2px solid #444444;
+  border: 2px solid #ff8282;
   padding: 11px 0 11px 12px;
 }
 
@@ -297,6 +297,41 @@
   line-height: 16px;
   display: block;
   text-align: center;
+}
+
+.form__input-email {
+  position: absolute;
+  left: calc(100% - 34px);
+  color: @black;
+  stroke: @black;
+
+  &:hover {
+    color: @main-color;
+    stroke: @main-color;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    color: #ff8282;
+  }
+}
+
+.form__input-phone {
+  position: absolute;
+  left: calc(100% - 34px);
+  color: @black;
+
+  &:hover {
+    color: @main-color;
+  }
+}
+
+.form__input:not(:placeholder-shown):invalid + .form__input-email {
+  color: #ff8282;
+  stroke: #ff8282;
+}
+
+.form__input:not(:placeholder-shown):invalid + .form__input-phone {
+  color: #ff8282;
 }
 
 @media (min-width: @tablet-width) {
@@ -334,7 +369,7 @@
   }
 
   .form__field--aim {
-    padding: 25px 28px;
+    padding: 30px 28px;
     border: 1px solid #e7e7e7;
     margin-bottom: 75px;
   }
@@ -370,11 +405,15 @@
   }
 
   .form__control {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
+  }
+
+  .form__field--main {
+    margin-bottom: 58px;
   }
 
   .form__field--contacts {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
   }
 
   .form__field--contacts::before {
@@ -428,6 +467,11 @@
 
   .form__control--radio {
     padding-left: 60px;
+    margin-bottom: 23px;
+  }
+
+  .form__control--radio:last-child {
+    margin-bottom: 0;
   }
 
   .form__control--checkbox {
@@ -445,7 +489,7 @@
     width: 282px;
     margin: 0;
     font-size: 20px;
-    padding: 13px 45px;
+    padding: 16px 45px;
   }
 
   .form__notice {
@@ -461,7 +505,7 @@
 
   .form__field-wrapper {
     display: flex;
-    gap: 80px;
+    gap: 120px;
   }
 
   .form__field--main {
@@ -470,6 +514,7 @@
 
   .form__field--aim {
     flex-grow: 1;
+    margin-bottom: 68px;
   }
 
   .form__field--contacts {
@@ -487,7 +532,8 @@
 
   .form__field--additional {
     grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 61px;
+    margin-bottom: 68px;
+    gap: 80px;
   }
 
   .form__control--checkbox {
@@ -500,6 +546,16 @@
   }
 
   .form__button-wrapper {
-    margin-bottom: 82px;
+    margin-bottom: 12px;
+    gap: 82px;
+  }
+
+  .form__heading--additional {
+    margin-bottom: 65px;
+  }
+
+  .form__input-email {
+    top: 20px;
+    left: 520px;
   }
 }

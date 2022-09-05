@@ -36,7 +36,8 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    background-image: linear-gradient(to bottom, #ffffff 58%, #ebebeb 42%);
+    background-image: linear-gradient(to bottom, #ffffff 63%, #ebebeb 37%);
+    padding-bottom: 152px;
   }
 
   .example__wrapper {
@@ -52,6 +53,7 @@
   .example__title {
     grid-column: 1 / 3;
     .title-tablet();
+    margin-bottom: 64px;
   }
 
   .example__description {
@@ -67,12 +69,14 @@
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+    margin-top: 12px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    background-image: linear-gradient(to bottom, #ffffff 27%, #ebebeb 27%);
+    background-image: linear-gradient(to bottom, #ffffff 22%, #ebebeb 22%);
+    padding-bottom: 40px;
   }
 
   .example__wrapper {
@@ -91,10 +95,12 @@
 
   .example__description {
     margin-bottom: 68px;
+    max-width: 436px;
   }
 
   .example__total-price {
     text-align: left;
+    margin-bottom: 33px;
   }
 
   .example__price-value {

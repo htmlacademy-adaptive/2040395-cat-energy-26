@@ -51,10 +51,10 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
-    max-width: 340px;
+    padding-left: 40px;
 
     &::before {
-      transform: translate(380px, 22px);
+      transform: translate(410px, 22px);
     }
 
     &::after {
@@ -65,7 +65,7 @@
       background-color: @main-color;
       top: 0;
       transform: translateY(22px);
-      right: calc(100% + 40px);
+      right: calc(100% + 1px);
     }
   }
 
@@ -93,8 +93,17 @@
   }
 
   .sideline__title {
-    margin-bottom: 81px;
+    margin-bottom: 83px;
     padding-left: 0;
+
+    &::before {
+      transform: translate(374px, 25px);
+    }
+
+    &::after {
+      transform: translateY(25px);
+      right: calc(100% + 40px);
+    }
   }
 
   .sideline__item {
