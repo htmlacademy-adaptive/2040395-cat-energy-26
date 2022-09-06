@@ -63,6 +63,10 @@
     margin-bottom: 22px;
   }
 
+  .additional-product:last-child::after {
+    display: none;
+  }
+
   .additional-product__description {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -98,6 +102,7 @@
   }
 
   .additional-product:last-child::after {
+    display: block;
     transform: translateY(70px);
   }
 
