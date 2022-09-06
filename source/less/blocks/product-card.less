@@ -150,7 +150,7 @@
   }
 
   .product-card__details {
-    margin: 21px 0 42px;
+    margin: 20px 0 30px;
     display: grid;
     gap: 16px;
     grid-column: 1 / 2;
@@ -172,7 +172,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    transform: translateY(25px);
+    transform: translateY(22px);
   }
 
   .product-card__button {
@@ -213,5 +213,11 @@
 
   .product-card__description--all::before {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card__title {
+    padding: 0 15px;
   }
 }

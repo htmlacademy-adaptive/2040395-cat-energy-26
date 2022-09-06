@@ -76,6 +76,7 @@
     width: 560px;
     height: 512px;
     margin: 0 auto;
+    transform: translateY(53px);
   }
 
   .slider__before {
@@ -86,5 +87,11 @@
   .slider__after {
     width: 560px;
     height: 512px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    transform: translateX(26px);
   }
 }

@@ -35,7 +35,7 @@
     width: 628px;
     gap: 296px;
     padding-top: 60px;
-    padding-bottom: 55px;
+    padding-bottom: 58px;
   }
 
   .contacts__text {
@@ -53,6 +53,10 @@
   .contacts__street {
     display: block;
   }
+
+  .contacts__map {
+    height: 400px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -64,9 +68,18 @@
     gap: 87px;
     margin-top: 95px;
     margin-left: 110px;
+    width: 565px;
   }
 
   .contacts--accent {
     background-color: @white;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__map {
+    height: 400px;
   }
 }
