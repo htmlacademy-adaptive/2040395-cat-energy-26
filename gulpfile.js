@@ -41,6 +41,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
+  .pipe(rename('index.min.js'))
   .pipe(gulp.dest('build/js'));
 }
 
@@ -130,8 +131,9 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/index.js', gulp.series(scripts));
-  gulp.watch('source/*.html'), gulp.series(html, reload);
+  gulp.watch('source/*.html', gulp.series(html));
+  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(scripts));
 }
 
 // Build
@@ -167,4 +169,5 @@ export default gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);

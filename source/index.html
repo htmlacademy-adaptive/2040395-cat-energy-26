@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -56,7 +58,7 @@
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
-                <img class="hero__image" width="280" height="270" src="img/index-can-mobile.png" srcset="img/index-can-mobile.png 1x, img/index-can-mobile@2x.png 2x" alt="Банка корма Кэт энерджи со вкусом курицы.">
+                <img class="hero__image" loading="lazy" width="280" height="270" src="img/index-can-mobile.png" srcset="img/index-can-mobile.png 1x, img/index-can-mobile@2x.png 2x" alt="Банка корма Кэт энерджи со вкусом курицы.">
               </picture>
             </div>
           </div>
@@ -135,7 +137,7 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat-tablet.webp 1x, img/cat-fat-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/cat-fat-mobile.webp 1x, img/cat-fat-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/cat-fat-tablet.png 1x, img/cat-fat-tablet@2x.png 2x">
-                  <img class="slider__before" src="img/cat-fat-mobile.png" srcset="img/cat-fat-mobile.png 1x, img/cat-fat-mobile@2x.png 2x" width="280" height="256" alt="Пухлый котик.">
+                  <img class="slider__before" loading="lazy" src="img/cat-fat-mobile.png" srcset="img/cat-fat-mobile.png 1x, img/cat-fat-mobile@2x.png 2x" width="280" height="256" alt="Пухлый котик.">
                 </picture>
               </div>
               <div class="slider__resizer" id="slider__resizer"></div>
@@ -144,7 +146,7 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-slim-tablet.webp 1x, img/cat-slim-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/cat-slim-mobile.webp 1x, img/cat-slim-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/cat-slim-tablet.png 1x, img/cat-slim-tablet@2x.png 2x">
-                  <img class="slider__after" src="img/cat-slim-mobile.png" srcset="img/cat-slim-mobile.png 1x, img/cat-slim-mobile@2x.png 2x" width="280" height="256" alt="Стройный котик.">
+                  <img class="slider__after" loading="lazy" src="img/cat-slim-mobile.png" srcset="img/cat-slim-mobile.png 1x, img/cat-slim-mobile@2x.png 2x" width="280" height="256" alt="Стройный котик.">
                 </picture>
               </div>
             </div>
@@ -208,7 +210,7 @@
 
     </footer>
   </div>
-  <script src="js/index.js"></script>
+  <script src="js/index.min.js"></script>
 </body>
 
 </html>
